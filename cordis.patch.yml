@@ -1,0 +1,26 @@
+# 一起听歌的 bundle 层。
+#
+# 两行：悬浮窗本体 + 语音识别的两个 Host 行（只装 Host，不带麦克风界面）。
+# 配置项可以在插件页面里改，也可以直接改这里。
+- insert:
+    - id: listen-together
+      name: '@local/listen-together'
+      config:
+        # 把来源固定到某个进程（例如 chrome.exe）；留空就自动跟随正在出声的应用。
+        app: ''
+        # 启动时显示悬浮窗；false 则只在后台采集。
+        showWindow: true
+        # 语音识别：把回环音频切一小段送进 SenseVoice，读到的字作为歌词参考。
+        lyrics: true
+        sttClipSeconds: 10
+        sttEveryMinutes: 1
+        # 状态写进这个文件，方便排查；留空不写。
+        traceFile: ''
+    - id: listen-together-stt
+      name: '@deepseek-ai/dsh-experimental-speech-to-text'
+      config:
+        defaultProvider: sensevoice-local
+    - id: listen-together-sensevoice
+      name: '@deepseek-ai/dsh-experimental-speech-to-text-sensevoice'
+      config:
+        dataRoot: !!js dshHomePath('speech-to-text', 'sensevoice')

@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Listen together",
+    "description": "Reads the system audio loopback, shows a small always-on-top window for pause and per-app volume, and lets the current session ask what is playing.",
+    "detail": "docs/DETAIL.md"
+  }
+}

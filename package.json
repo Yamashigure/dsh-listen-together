@@ -1,0 +1,44 @@
+{
+  "name": "@local/listen-together",
+  "version": "0.1.0-beta.1",
+  "private": false,
+  "description": "一起听歌：读取系统回环音频，用一只小悬浮窗控制来源窗口，并让当前会话随时知道在放什么。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "music",
+    "now-playing",
+    "windows",
+    "obs"
+  ],
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "native/*.cs",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "license": "MIT"
+}

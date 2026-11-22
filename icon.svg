@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fb6ff"/>
+      <stop offset="1" stop-color="#c2a6ff"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171b24"/>
+      <stop offset="1" stop-color="#0f1218"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="#0e1015"/>
+  <rect x="8.5" y="8.5" width="239" height="239" rx="55.5" fill="none" stroke="#262d3a"/>
+  <rect x="40" y="76" width="176" height="104" rx="24" fill="url(#panel)" stroke="#2c3444"/>
+  <circle cx="66" cy="108" r="6" fill="url(#accent)"/>
+  <rect x="82" y="100" width="94" height="8" rx="4" fill="#3a4356"/>
+  <rect x="82" y="114" width="58" height="6" rx="3" fill="#2a3242"/>
+  <g fill="url(#accent)">
+    <rect x="64" y="140" width="7" height="16" rx="3.5" opacity="0.55"/>
+    <rect x="78" y="134" width="7" height="28" rx="3.5" opacity="0.75"/>
+    <rect x="92" y="128" width="7" height="40" rx="3.5"/>
+    <rect x="106" y="136" width="7" height="24" rx="3.5" opacity="0.85"/>
+    <rect x="120" y="130" width="7" height="36" rx="3.5"/>
+    <rect x="134" y="142" width="7" height="12" rx="3.5" opacity="0.6"/>
+  </g>
+  <circle cx="176" cy="152" r="14" fill="#1d2330" stroke="#39425a"/>
+  <path d="M172 145.5 L183 152 L172 158.5 Z" fill="url(#accent)"/>
+  <path d="M196 78 c-7 -10 -22 -7 -22 5 c0 11 14 18 22 25 c8 -7 22 -14 22 -25 c0 -12 -15 -15 -22 -5 z" fill="none" stroke="#c2a6ff" stroke-width="5" stroke-linejoin="round" opacity="0.9"/>
+</svg>
