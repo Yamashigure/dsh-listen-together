@@ -40,5 +40,10 @@
       "immediately": true
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yamashigure/dsh-listen-together.git"
+  },
+  "homepage": "https://github.com/Yamashigure/dsh-listen-together#readme",
   "license": "MIT"
 }
