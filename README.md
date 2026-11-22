@@ -1,7 +1,10 @@
 # 一起听歌
+
 <img width="545" height="174" alt="image" src="https://github.com/user-attachments/assets/3d9adec9-8dbd-4468-8d3c-922ab4533b2c" />
-一只小小的音频悬浮窗，加上一套让会话能「听见」的接口。这个是允许自定义背景、透明度和尺寸的，主要用来当做桌面悬浮窗用，也可以用作直播素材，是可识别窗口。
-控制页面：
+
+- **一只小小的音频悬浮窗，加上一套让会话能「听见」的接口。这个是允许自定义背景、透明度和尺寸的，主要用来当做桌面悬浮窗用，也可以用作直播素材，是可识别窗口。
+
+- **控制页面：
 <img width="474" height="493" alt="image" src="https://github.com/user-attachments/assets/85294c6a-2baf-4ec3-ac06-72b13b0cae0b" />
 本插件依赖DSH使用，由DSH一手包办，我负责许愿。
 以下是Deepseek写的说明文档。
