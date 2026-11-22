@@ -62,6 +62,26 @@ beta 没有发布到 npm，不要用包名安装。原生辅助程序没有签�
 - **听写不是歌词**：SenseVoice 是语音识别模型，不是音乐分离；伴奏一响，人声会被糊住，结果可能是碎片或空。它只作为参考片段，不作为准确歌词展示。干净机器上第一次启用语音识别需要下载模型（约 239 MB）。
 - **beta 阶段的已知问题**：面板按钮走宿主命令，会在会话日志里留下命令事件（不是聊天消息）；后续版本会换成不写会话的桥。原生辅助程序在第一次启用时用 `csc` 编译，未签名；自动评论已经移除，只保留手动触发。
 
+## 语音模型
+
+听写用的 SenseVoice 权重由 DSH 自带的 `@deepseek-ai/dsh-experimental-speech-to-text-sensevoice` 负责下载，第一次启用时自动拉取并校验 sha256，插件本身不重复实现这一步。
+
+缓存位置 `%USERPROFILE%\.dsh\speech-to-text\sensevoice\models\`，三个文件：
+
+| 文件 | 字节数 | 来源 |
+| --- | --- | --- |
+| `sensevoice-onnx\model.int8.onnx` | 239,233,841 | https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/model.int8.onnx |
+| `sensevoice-onnx\tokens.txt` | 315,894 | https://huggingface.co/csukuangfj/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-2024-07-17/resolve/2365baeacb507f821a0c8120fcee3d484dba7a07/tokens.txt |
+| `silero\silero_vad.onnx` | 1,807,522 | https://huggingface.co/csukuangfj/vad/resolve/fba88cd2e921609e7675c3aaf51e0b9b295da4bc/silero_vad.onnx |
+
+sha256：
+
+- `model.int8.onnx` `c71f0ce00bec95b07744e116345e33d8cbbe08cef896382cf907bf4b51a2cd51`
+- `tokens.txt` `f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc`
+- `silero_vad.onnx` `a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28`
+
+下载不动的话可以手动下这三个文件，按上面的目录放好，文件名别改。合计约 241 MB（十进制，用 `MiB` 算是 230）。下载源在 Hugging Face，国内直连多半要走代理。
+
 ## 隐私
 
 - 回环音频只在本机处理，语音识别用的是本地 SenseVoice 模型；插件不上传音频，也不申请麦克风。
